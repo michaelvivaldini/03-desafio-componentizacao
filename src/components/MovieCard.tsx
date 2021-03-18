@@ -1,32 +1,31 @@
 import { Star, Clock } from 'react-feather';
+import { MovieResponseProps } from '../@types/movie.type';
 
 import '../styles/movie-card.scss';
 
 interface MovieCardProps {
-  title: string;
-  poster: string;
-  rating: string;
-  runtime: string;
+  movie: MovieResponseProps;
+  setSelectedMovie: (movie: MovieResponseProps) => void;
 }
 
-export function MovieCard(props: MovieCardProps) {
+export function MovieCard({ setSelectedMovie, movie }: MovieCardProps) {
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={() => setSelectedMovie(movie)}>
       <img
-        src={props.poster}
-        alt={props.title}
+        src={movie.Poster}
+        alt={movie.Title}
       />
 
       <div>
         <div className="movie-info">
-          <span>{props.title}</span>
+          <span>{movie.Title}</span>
           <div className="meta">
             <div>
-              <Star /> {props.rating}
+              <Star /> {movie.Ratings[0].Value}
             </div>
 
             <div>
-              <Clock /> {props.runtime}
+              <Clock /> {movie.Runtime}
             </div>
           </div>
         </div>
