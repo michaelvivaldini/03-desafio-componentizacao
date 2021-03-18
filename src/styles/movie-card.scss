@@ -1,5 +1,10 @@
 .movie-card {
   position: relative;
+  cursor: pointer;
+
+  :hover{
+    filter: contrast(200%);
+  }
 
   img {
     width: 14.31rem;
