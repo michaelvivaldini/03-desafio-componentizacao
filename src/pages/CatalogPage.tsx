@@ -20,7 +20,7 @@ export function CatalogPage({ selectedGenre, setSelectedMovie, movies }: Catalog
       <main>
         <div className="movies-list">
           {movies.map(movie => (
-            <MovieCard movie={movie} setSelectedMovie={setSelectedMovie} />
+            <MovieCard key={movie.Title} movie={movie} setSelectedMovie={setSelectedMovie} />
           ))}
         </div>
       </main>

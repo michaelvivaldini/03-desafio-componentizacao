@@ -42,7 +42,7 @@ export function App() {
         setSelectedMovie={setSelectedMovie}
       />
       {selectedMovie.Title ?
-        <MoviePage movie={selectedMovie} />
+        <MoviePage movie={selectedMovie} setSelectedMovie={setSelectedMovie} />
         :
         <CatalogPage
           selectedGenre={selectedGenre}

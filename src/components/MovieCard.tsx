@@ -21,7 +21,7 @@ export function MovieCard({ setSelectedMovie, movie }: MovieCardProps) {
           <span>{movie.Title}</span>
           <div className="meta">
             <div>
-              <Star /> {movie.Ratings[0].Value}
+              <Star /> {movie.imdbRating}
             </div>
 
             <div>
