@@ -24,7 +24,7 @@ export function MoviePage({ movie, setSelectedMovie }: MovieProps) {
             src={movie.Poster}
             alt={movie.Title}
           />
-          <div className="meta">
+          <div className="metadata">
             <div className="info">
               <span><strong>Genres <br /> </strong>{movie.Genre}</span>
               <span><strong>Writers <br /> </strong>{movie.Writer}</span>
@@ -34,7 +34,7 @@ export function MoviePage({ movie, setSelectedMovie }: MovieProps) {
               <span><strong>Production <br /></strong>{movie.Production}</span>
               <span><strong>Awards <br /></strong>{movie.Awards}</span>
             </div>
-            <div>
+            <div className="icons">
               <div><Star /> {movie.imdbRating}</div>
               <div><Clock /> {movie.Runtime}</div>
               <div><Calendar /> {movie.Year}</div>
